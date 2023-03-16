@@ -1,0 +1,19 @@
+{
+  "name": "screeps-splunk-forwarder",
+  "version": "1.0.0",
+  "description": "Forwards logs to splunk from screeps",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "screeps",
+    "splunk"
+  ],
+  "author": "Cliff Workman, cworkman@eborkdev.com",
+  "license": "ISC",
+  "dependencies": {
+    "screeps-api": "^1.16.0",
+    "splunk-logging": "^0.11.1"
+  }
+}
