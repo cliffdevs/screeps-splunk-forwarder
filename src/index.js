@@ -1,4 +1,4 @@
-const { Logger } = require("splunk-logger");
+const { Logger } = require("splunk-logging");
 const { ScreepsAPI } = require("screeps-api");
 
 const readEnv = val => {
@@ -21,6 +21,10 @@ const api = new ScreepsAPI({
 
 const splunkLogger = new Logger({
     token: readEnv("SPLUNK_TOKEN"),
+    protocol: readEnv("SPLUNK_PROTOCOL"),
+    host: readEnv("SPLUNK_HOST"),
+    port: Number(readEnv("SPLUNK_PORT") || "443"),
+    path: readEnv("SPLUNK_PATH"),
     batchInterval: 1000,
     maxBatchCount: 10,
     maxBatchSize: 1024 // 1kb
